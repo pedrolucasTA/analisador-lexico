@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Analisador Léxico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="./bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="row">
+      <div align="center" style="color: rgb(0, 0, 0);">
+        <h4>........... ANALISADOR LÉXICO ...........</h4>
+        <p>Linguagens Formais - URI Campus Erechim</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="topo">
+          <div class="card-body body-wrapper">
+            <div class="col-md-6">
+              <div class="cleafix">
+                <div class="col-sm-9 padding-zero">
+                  <div class="input-group">
+                    <input id="input-insere" onkeyup="verificaCaracter();" type="text" class="form-control"
+                      placeholder="Gravar Palavra" aria-describedby="basic-addon1" value="">
+                  </div>
+                </div>
+                <div class="col-sm-3 padding-zero align-center">
+                  <button type="button" id="botao" class="btn btn-primary" onclick="gravaPalavra();">Gravar</button>
+                </div>
+              </div>
+              <table class="table card-table" style="width: 95%;">
+                <thead>
+                </thead>
+                <tbody id="table-palavras">
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <div class="cleafix">
+                <div class="col-sm-9 padding-zero">
+                  <div id="box" class="input-group">
+                    <input type="text" id="buscar" class="form-control" placeholder="Buscar Palavra"
+                      aria-describedby="basic-addon1" value="">
+                  </div>
+                </div>
+                <div class="col-sm-3 padding-zero align-center">
+                  <button id="botao" type="button" onclick="limparCampo();" class="btn btn-primary">Apagar</button>
+                </div>
+              </div>
+              <table class="table card-table" style="width: 95.5%;">
+                <tbody id="table-search">
+                </tbody>
+              </table>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <table id="automato" class="table table-striped table-bordered table-hover"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>
